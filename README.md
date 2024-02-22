@@ -2,7 +2,7 @@
 
 Este módulo permite buscar sinônimos em Português do Brasil sem a dependência de serviços externos.
 
-A base possui 26.645 palavras e o arquivo possui 5,22MB.
+A base possui 26.662 palavras e o arquivo possui 5,22MB.
 
 ### Como instalar
 
