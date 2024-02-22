@@ -1,6 +1,6 @@
 {
   "name": "sinonimos-local",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Busca por sinônimos sem requisições à serviços externos",
   "homepage": "https://openprocessing.org/sketch/2184412",
   "repository": {
