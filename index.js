@@ -8,9 +8,7 @@ var sinonimos_db = require('./db/db_compiled.json')
 function sinonimos(palavra) {
     var index = sinonimos_db.palavras.indexOf(palavra);
 	if(index >= 0){
-        var syns = [];
-        sinonimos_db.sinonimos[index].forEach(i => syns.push(sinonimos_db.palavras[i]));
-        return syns;
+        return sinonimos_db.sinonimos[index].map(i => sinonimos_db.palavras[i]);
     }
     return [];
 };
