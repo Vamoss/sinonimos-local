@@ -64,7 +64,10 @@ function singulariza(palavra) {
  */
 function masculiniza(palavra) {
     var l = palavra.length;
-    if(palavra.slice(-2)=="ra"){
+    if(palavra.slice(-3)=="tra"){
+        //neutra
+        return palavra.substring(0, l-1) + "o";
+    }else if(palavra.slice(-2)=="ra"){
         //vendedora, cantora
         return palavra.substring(0, l-1);
     }else if(palavra.slice(-1)=="a"){
