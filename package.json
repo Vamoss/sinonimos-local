@@ -5,7 +5,7 @@
   "homepage": "https://openprocessing.org/sketch/2184412",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vamoss/sininomos-local.git"
+    "url": "git+https://github.com/vamoss/sininomos-local.git"
   },
   "main": "index.js",
   "scripts": {
