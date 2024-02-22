@@ -1,0 +1,17 @@
+{
+  "name": "sinonimos-local",
+  "version": "1.0.0",
+  "description": "Busca por sinônimos sem requisições à serviços externos",
+  "homepage": "https://openprocessing.org/sketch/2184412",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vamoss/sininomos-local.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "node compile_db.js",
+    "test": "node test.js"
+  },
+  "author": "Vamoss",
+  "license": "MIT License"
+}
