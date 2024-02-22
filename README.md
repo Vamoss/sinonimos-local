@@ -27,6 +27,18 @@ sinonimos('teste');
 // []
 ```
 
+
+O segundo parâmetro opcional, quando `true`, tenta converter palavras no plural para singular e palavras no feminino para feminino. Ex:
+```js
+//no banco há apenas boneco
+sinonimos('boneca', true)
+//['autómato','badameco','bebé','beneficiação','bobo','bonificação','bonifrate','briguela','bufão','criancinha','descontobeneficiar','fantoche','gratifiautômato','gratificação','marionete','nené','palhaço','pequerrucho','polichinelo','títere']
+
+//no banco há apenas a palavra réptil
+sinonimos('répteis', true);
+//['rastejante','reptador','reptante']
+```
+
 ## Sobre o banco de sinônimos
 
 Este banco de sinônimos foi extraído a partir dos dados disponibilizados em:

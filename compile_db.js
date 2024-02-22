@@ -37,8 +37,9 @@ fs.readFile('db/db.json', 'utf8', (err, data) => {
         }
         counter++;
     };
+    clearProgress();
 
-    console.log("\nSTART - propagate unique words")
+    console.log("START - propagate unique words")
     for (const [key, value] of Object.entries(newObjects)) {
         result[key] = value;
     }
@@ -61,8 +62,9 @@ fs.readFile('db/db.json', 'utf8', (err, data) => {
         }
         counter++;
     }
+    clearProgress();
 
-    console.log("\nSTART - create indexed references")
+    console.log("START - create indexed references")
     var sortAsc = Object.entries(result).sort((a, b) => a[0].localeCompare(b[0]));
     words = [];
     length = sortAsc.length;
@@ -86,13 +88,19 @@ fs.readFile('db/db.json', 'utf8', (err, data) => {
         }
         counter++;
     };
+    clearProgress();
 
     result = JSON.stringify({palavras:words, sinonimos:synonyms});
 
     fs.writeFileSync("db/db_compiled.json", result);
 
-    console.log("\nFINISHED COMPILING")
+    console.log("FINISHED COMPILING")
 });
+
+function clearProgress(){
+    process.stdout.clearLine(0);
+    process.stdout.cursorTo(0);
+}
 
 function printProgress(progress){
     process.stdout.clearLine(0);

@@ -13,6 +13,7 @@ function compareArrays(array1, array2) {
 }
 
 try {
+    //palavra exata
     assert.strictEqual(
         compareArrays(
             sinonimos("testar"), 
@@ -21,12 +22,31 @@ try {
         'A palavra testar deveria não obteve os sinônimos esperados.'
     );
 
+    //palavra inexistete
     assert.strictEqual(
         compareArrays(
             sinonimos("teste"), 
             []
         ), true,
         'A palavra teste não obteve uma array vazia.'
+    );
+
+    //palavra no feminino encontra os sinônimos no masculino
+    assert.strictEqual(
+        compareArrays(
+            sinonimos("boneca", true), 
+            ['autómato','badameco','bebé','beneficiação','bobo','bonificação','bonifrate','briguela','bufão','criancinha','descontobeneficiar','fantoche','gratifiautômato','gratificação','marionete','nené','palhaço','pequerrucho','polichinelo','títere']
+        ), true,
+        'A palavra boneca não obteve os sinônimos esperados.'
+    );
+
+    //palavra no plural encontra os sinônimos no singular
+    assert.strictEqual(
+        compareArrays(
+            sinonimos("répteis", true), 
+            ['rastejante','reptador','reptante']
+        ), true,
+        'A palavra répteis não obteve os sinônimos esperados.'
     );
 
     console.log('\x1b[32m%s\x1b[0m', 'Todos os testes passaram.');
